@@ -11,8 +11,9 @@ export const metadata: Metadata = {
 const TIERS = [
   {
     rank: 'S Tier',
-    color: '#f59e0b',
+    color: '#dc2626',
     icon: Crown,
+    glow: true,
     description: 'Dominant meta builds with the highest A20 win rates.',
     builds: [
       { name: 'Ironclad Perfected Strike', winrate: '68%', difficulty: 'Medium' },
@@ -22,7 +23,7 @@ const TIERS = [
   },
   {
     rank: 'A Tier',
-    color: '#ef4444',
+    color: '#f59e0b',
     icon: Star,
     description: 'Strong builds that consistently win A20 runs.',
     builds: [
@@ -33,7 +34,7 @@ const TIERS = [
   },
   {
     rank: 'B Tier',
-    color: '#f97316',
+    color: '#a1a1aa',
     icon: Award,
     description: 'Viable builds that can win with the right relics.',
     builds: [
@@ -44,7 +45,7 @@ const TIERS = [
   },
   {
     rank: 'C Tier',
-    color: '#a1a1aa',
+    color: '#78716c',
     icon: Zap,
     description: 'Niche builds requiring specific relic combinations.',
     builds: [
@@ -74,7 +75,7 @@ export default function TierListsPage() {
 
       <div className="space-y-8">
         {TIERS.map((tier, i) => (
-          <div key={tier.rank} className="card-premium overflow-hidden">
+          <div key={tier.rank} className={`card-premium overflow-hidden ${tier.glow ? 'glow-border ring-1 ring-accent/20' : ''}`}>
             <div className="flex items-center gap-3 p-5 border-b border-[var(--border)]">
               <div
                 className="w-10 h-10 rounded-lg flex items-center justify-center text-lg font-bold shrink-0"
