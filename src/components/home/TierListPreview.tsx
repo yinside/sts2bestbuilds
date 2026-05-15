@@ -7,8 +7,9 @@ import { Crown, Star, Award } from 'lucide-react';
 const TIERS = [
   {
     rank: 'S',
-    color: '#f59e0b',
+    color: '#dc2626',
     icon: Crown,
+    glow: true,
     items: [
       { name: 'Ironclad Perfected Strike', description: 'Highest winrate build. Stack Strikes, scale hard.' },
       { name: 'Silent Shiv Spam', description: 'Infinite shiv generation with Accuracies.' },
@@ -16,7 +17,7 @@ const TIERS = [
   },
   {
     rank: 'A',
-    color: '#ef4444',
+    color: '#f59e0b',
     icon: Star,
     items: [
       { name: 'Defect Frost Orb Build', description: 'Defensive scaling with Blizzard finisher.' },
@@ -25,7 +26,7 @@ const TIERS = [
   },
   {
     rank: 'B',
-    color: '#f97316',
+    color: '#a1a1aa',
     icon: Award,
     items: [
       { name: 'Ironclad Fire Breathing', description: 'Status card synergy build.' },
@@ -61,7 +62,7 @@ export default function TierListPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.4 }}
-              className="card-premium p-5"
+              className={`card-premium p-5 ${tier.glow ? 'glow-border ring-1 ring-accent/20' : ''}`}
             >
               <div className="flex items-center gap-3 mb-4">
                 <div
