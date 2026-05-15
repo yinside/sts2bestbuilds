@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --red: #e63946;
+  --red-hover: #ff4d5a;
+  --bg: #0a0a0b;
+  --card: #141417;
+  --border: rgba(255, 255, 255, 0.08);
+  --text: #e4e4e7;
+  --muted: #71717a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-image:
+    radial-gradient(ellipse at top, rgba(230, 57, 70, 0.06), transparent 60%),
+    radial-gradient(ellipse at bottom, rgba(230, 57, 70, 0.02), transparent 60%);
+  background-attachment: fixed;
+}
+
+.markdown-body {
+  line-height: 1.85;
+  font-size: 1.05rem;
+  color: #d4d4d8;
+}
+
+.markdown-body h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 2rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-body h2 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--red);
+  margin: 1.8rem 0 0.8rem;
+}
+
+.markdown-body h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #e4e4e7;
+  margin: 1.5rem 0 0.6rem;
+}
+
+.markdown-body p {
+  margin: 0.8rem 0;
+}
+
+.markdown-body ul, .markdown-body ol {
+  padding-left: 1.5rem;
+  margin: 0.8rem 0;
+}
+
+.markdown-body li {
+  margin: 0.3rem 0;
+}
+
+.markdown-body code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.markdown-body pre {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+.markdown-body blockquote {
+  border-left: 3px solid var(--red);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--muted);
+}
+
+.markdown-body strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 3px; }
